@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap');
+
+$maxWidth: 1200px;
+$firstColor: #b4e845;
+$secondColor: #042612;
+$terciareColor: #ebebeb;
+$standartSpace: 16px;
+$timeAnimation: 0.4s;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.FirstScreen {
+  height: 800px;
+  background-image: url('../assets/bg-dolar.jpg');
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container {
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  transition: all $timeAnimation cubic-bezier(0.165, 0.84, 0.44, 1);
+  div {
+    max-width: $maxWidth;
+    padding: $standartSpace;
+    width: 100vw;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    position: fixed;
+    left: calc(50% - 600px);
+  }
+
+  img {
+    margin-right: 120px;
+    cursor: pointer;
+  }
+
+  nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: #ebebeb;
+      margin: auto;
+
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  button {
+    margin-left: 50px;
+    color: $secondColor;
+    background-color: #ebebeb;
+    border: none;
+    padding: $standartSpace;
+    cursor: pointer;
+
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+}
+
+.scroll {
+  background-color: #fff;
+
+  nav a {
+    color: $secondColor;
+  }
+
+  button {
+    color: $firstColor;
+    background-color: $secondColor;
+  }
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+
+  span {
+    max-width: 500px;
+    max-height: 300px;
+    font-size: 60px;
+    font-weight: bold;
+    margin: auto 0;
+  }
+
+  div {
+    max-width: $maxWidth;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.SecondScreen {
+  height: 100vh;
+  background-color: $terciareColor;
+
+  div.rect {
+    position: relative;
+    top: -157px;
+    margin: 0 auto;
+    width: $maxWidth;
+    height: 220px;
+    background-color: #fff;
+
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #000;
+  }
+}
