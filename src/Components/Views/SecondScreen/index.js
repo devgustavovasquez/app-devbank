@@ -1,11 +1,10 @@
 import React from 'react';
+import BannerCard from '../../BannerCard';
 
 export default function SecondScreen() {
   return (
     <div className="SecondScreen">
-        <div className="rect"></div>
-
-
+      <BannerCard />
     </div>
 );
 }

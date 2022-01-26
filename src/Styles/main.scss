@@ -4,6 +4,7 @@ $maxWidth: 1200px;
 $firstColor: #b4e845;
 $secondColor: #042612;
 $terciareColor: #ebebeb;
+$quartareColor: #868686;
 $standartSpace: 16px;
 $timeAnimation: 0.4s;
 
@@ -45,7 +46,6 @@ $timeAnimation: 0.4s;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-self: center;
     position: fixed;
     left: calc(50% - 600px);
   }
@@ -129,7 +129,47 @@ $timeAnimation: 0.4s;
     height: 220px;
     background-color: #fff;
 
+    display: flex;
+    justify-content: space-between;
+
     border-radius: 5px;
-    box-shadow: 10px 10px 10px #000;
+    box-shadow: 2px 15px 20px 5px rgba($color: #000000, $alpha: 0.25);
+
+    &:hover {
+      box-shadow: 2px 15px 20px 5px rgba($color: #000000, $alpha: 0.35);
+    }
+
+    div {
+      width: 700px;
+
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      text-align: left;
+
+      h2 {
+        color: $secondColor;
+        font-size: 40px;
+      }
+
+      span {
+        color: $quartareColor;
+      }
+    }
+
+    button {
+      color: $firstColor;
+      background-color: $secondColor;
+
+      border: none;
+      padding: $standartSpace;
+      cursor: pointer;
+
+      margin: auto;
+      text-align: center;
+      font-size: 24px;
+      border-radius: 5px;
+      font-weight: 700;
+    }
   }
 }
