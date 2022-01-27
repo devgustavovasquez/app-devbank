@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function BannerCard() {
+export default function BannerBox() {
   return (
     <>
       <div className="rect">

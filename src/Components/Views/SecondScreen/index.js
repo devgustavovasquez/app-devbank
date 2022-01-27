@@ -1,10 +1,12 @@
 import React from 'react';
-import BannerCard from '../../BannerCard';
+import BannerBox from '../../BannerBox';
+import BannerMap from '../../Map';
 
 export default function SecondScreen() {
   return (
     <div className="SecondScreen">
-      <BannerCard />
+      <BannerBox />
+      <BannerMap />
     </div>
 );
 }

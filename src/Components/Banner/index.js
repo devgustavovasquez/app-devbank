@@ -6,7 +6,7 @@ export default function Banner() {
     <>
       <div className="banner-container">
         <div>
-          <span>Ter um banco é bom, mas ter Dev$Bank é muuuito melhor.</span>
+          <h1>Ter um banco é bom, mas ter Dev$Bank é muuuito melhor.</h1>
           <img src={galvaoImg} alt="imagem do anunciante" />
         </div>
       </div>

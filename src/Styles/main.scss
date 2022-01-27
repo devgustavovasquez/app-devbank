@@ -17,6 +17,49 @@ $timeAnimation: 0.4s;
   font-family: 'Maven Pro', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #ebebeb;
+  margin: auto;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 500px;
+  max-height: 300px;
+  font-size: 60px;
+  font-weight: bold;
+  margin: auto 0;
+}
+
+h2 {
+  color: $secondColor;
+  font-size: 40px;
+}
+
+button {
+  color: $firstColor;
+  background-color: $secondColor;
+
+  border: none;
+  padding: $standartSpace;
+  cursor: pointer;
+
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+div.rect {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 15px 20px 5px rgba($color: #000000, $alpha: 0.25);
+}
+
 .FirstScreen {
   height: 800px;
   background-image: url('../assets/bg-dolar.jpg');
@@ -59,15 +102,6 @@ $timeAnimation: 0.4s;
     width: 60%;
     display: flex;
     justify-content: space-between;
-
-    a {
-      text-decoration: none;
-      color: #ebebeb;
-      margin: auto;
-
-      font-size: 18px;
-      font-weight: 700;
-    }
   }
 
   button {
@@ -102,14 +136,6 @@ $timeAnimation: 0.4s;
   flex-direction: column;
   margin-top: 150px;
 
-  span {
-    max-width: 500px;
-    max-height: 300px;
-    font-size: 60px;
-    font-weight: bold;
-    margin: auto 0;
-  }
-
   div {
     max-width: $maxWidth;
     display: grid;
@@ -118,7 +144,7 @@ $timeAnimation: 0.4s;
 }
 
 .SecondScreen {
-  height: 100vh;
+  height: 1100px;
   background-color: $terciareColor;
 
   div.rect {
@@ -127,13 +153,9 @@ $timeAnimation: 0.4s;
     margin: 0 auto;
     width: $maxWidth;
     height: 220px;
-    background-color: #fff;
 
     display: flex;
     justify-content: space-between;
-
-    border-radius: 5px;
-    box-shadow: 2px 15px 20px 5px rgba($color: #000000, $alpha: 0.25);
 
     &:hover {
       box-shadow: 2px 15px 20px 5px rgba($color: #000000, $alpha: 0.35);
@@ -147,29 +169,164 @@ $timeAnimation: 0.4s;
       margin: auto;
       text-align: left;
 
-      h2 {
-        color: $secondColor;
-        font-size: 40px;
-      }
-
       span {
         color: $quartareColor;
       }
     }
+  }
+
+  .banner-map {
+    display: flex;
+    max-width: $maxWidth;
+    align-items: center;
+
+    margin: 0 auto;
+
+    justify-content: space-between;
+
+    img {
+      margin-left: 50px;
+      width: 600px;
+      height: 600px;
+    }
+
+    p {
+      color: $secondColor;
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    h1 {
+      color: $secondColor;
+    }
 
     button {
-      color: $firstColor;
-      background-color: $secondColor;
+      margin-top: $standartSpace;
+    }
+  }
+}
 
+.ThirdScreen {
+  height: 1000px;
+  max-height: 1000px;
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-width: 100%;
+    z-index: -1;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 500px;
+  }
+
+  h1 {
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+
+    margin-top: 200px;
+    cursor: pointer;
+  }
+}
+
+.FourthScreen {
+  height: 1100px;
+  background-color: $terciareColor;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    margin-bottom: $standartSpace * 2;
+    list-style: none;
+  }
+
+  h2 {
+    color: $firstColor;
+    margin-bottom: 150px;
+  }
+
+  a {
+    margin-left: 15px;
+    font-size: $standartSpace * 2;
+    color: $secondColor;
+  }
+
+  div.rect {
+    margin-left: 90px;
+    width: 450px;
+    height: 800px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    h2 {
+      margin: 40px 0 60px 10px;
+    }
+
+    input {
+      padding: 15px 0px 15px 15px;
+      margin: 5px 10px;
+      height: 25px;
+
+      font-size: 20px;
+      color: $secondColor;
+      background-color: $terciareColor;
       border: none;
-      padding: $standartSpace;
-      cursor: pointer;
+      border-radius: 3px;
 
-      margin: auto;
-      text-align: center;
-      font-size: 24px;
-      border-radius: 5px;
-      font-weight: 700;
+      &::placeholder {
+        color: $secondColor;
+      }
+    }
+
+    div.double-input {
+      display: flex;
+
+      input {
+        width: 210px;
+        margin: 5px 2.5px 5px 10px;
+      }
+    }
+
+    textarea {
+      padding: 15px 0px 15px 15px;
+      margin: 5px 10px;
+      height: 300px;
+
+      resize: none;
+      font-size: 20px;
+      color: $secondColor;
+      background-color: $terciareColor;
+      border: none;
+      border-radius: 3px;
+    }
+
+    div {
+      display: flex;
+      margin-top: 10px;
+
+      input {
+        margin-top: -3px;
+      }
+      p {
+        color: $secondColor;
+      }
     }
   }
 }
