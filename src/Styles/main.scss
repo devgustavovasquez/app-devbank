@@ -102,6 +102,33 @@ div.rect {
     width: 60%;
     display: flex;
     justify-content: space-between;
+
+    a {
+      position: relative;
+      padding: 0 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+
+        display: block;
+        width: 0%;
+        height: 4px;
+        background-color: $firstColor;
+
+        transform: scale(0, 1);
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scale(1, 1);
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   button {
@@ -243,7 +270,7 @@ div.rect {
 }
 
 .FourthScreen {
-  height: 1100px;
+  height: 1000px;
   background-color: $terciareColor;
 
   display: flex;
@@ -253,6 +280,8 @@ div.rect {
   li {
     margin-bottom: $standartSpace * 2;
     list-style: none;
+
+    cursor: pointer;
   }
 
   h2 {
@@ -276,7 +305,7 @@ div.rect {
     flex-direction: column;
 
     h2 {
-      margin: 40px 0 60px 10px;
+      margin: 40px 0 60px 15px;
     }
 
     input {
@@ -329,4 +358,11 @@ div.rect {
       }
     }
   }
+}
+
+.footer {
+  height: 30vh;
+  background-color: $secondColor;
+
+  display: flex;
 }
